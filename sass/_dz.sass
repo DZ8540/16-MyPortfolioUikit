@@ -1,0 +1,824 @@
+// Webkit custom scrollbar
+::-webkit-scrollbar
+    width: 10px !important
+
+::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important
+
+::-webkit-scrollbar-thumb
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important
+
+body
+    overflow-x: hidden
+    scroll-behavior: smooth
+
+.dz-preloader
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 10
+    height: 100vh
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    opacity: 1
+    visibility: visible
+    &_first, &_second, &_third, &_last
+        border-radius: 50%
+        position: absolute
+        border: 4px solid transparent
+    &_first
+        width: 100px
+        height: 100px
+        &-text
+            position: relative
+            width: 100%
+            height: 100%
+            &_d, &_z
+                position: absolute
+                font-family: "Lato - Regular", sans-serif
+                font-size: 40px
+            &_d
+                top: 9%
+                left: 20%
+            &_z
+                bottom: 9%
+                right: 20%
+    &_second
+        width: 120px
+        height: 120px
+        animation: rotate 1s linear infinite
+    &_third
+        width: 140px
+        height: 140px
+        animation: rotate 2s linear infinite
+    &_last
+        width: 160px
+        height: 160px
+        animation: rotate 3s linear infinite
+
+.dz-progressBar
+    position: fixed
+    left: 0
+    top: 0
+    width: 0%
+    height: 2px
+
+.uk-notification-message-primary
+    color: #00b894 !important
+    .uk-notification-close
+        transition: .5s !important
+        width: 40px !important
+        height: 40px !important
+        text-align: center !important
+        svg
+            transition: .5s !important
+        &:hover
+            svg
+                transform: rotate(-90deg) !important
+
+.uk-notification-message-danger
+    color: #ee5253 !important
+    .uk-notification-close
+        transition: .5s !important
+        width: 40px !important
+        height: 40px !important
+        text-align: center !important
+        svg
+            transition: .5s !important
+        &:hover
+            svg
+                transform: rotate(-90deg) !important
+
+#dz-section1
+    height: 100vh
+    width: 100%
+    position: relative
+    background-image: url("../img/Themes/Abstract Edition/dsvsdfv.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    background-blend-mode: overlay
+    .dz-section1Navbar
+        padding: 10px 100px 0px 100px
+        &_left
+            &-logo
+                position: relative
+                width: 40px
+                height: 40px
+                border-radius: 50%
+                &_svg
+                    &-circle
+                        transition: .8s
+                        transform-origin: center
+                        transform: rotate(-90deg)
+                &_text
+                    &-d, &-z
+                        position: absolute
+                        font-family: "Lato - Regular", sans-serif
+                        font-size: 18px
+                        font-weight: 400
+                    &-d
+                        top: 9%
+                        left: 20%
+                    &-z
+                        bottom: 9%
+                        right: 20%
+                
+        &_center
+            padding-top: 8px
+            &-list
+                &_li
+                    margin-right: 80px
+                    &:last-child
+                        margin-right: 0
+                    &-a
+                        font-family: "Lato - Regular", sans-serif
+                        font-size: 18px
+                        text-transform: none
+                        position: relative
+                        &::after
+                            content: ""
+                            width: 0px
+                            height: 2px
+                            transition: .5s
+                            position: absolute
+                            bottom: 25px
+                            left: 16px
+                        &:hover::after
+                            width: 35px
+        &_rightFirst
+            &-btn
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 30px
+                width: 120px
+                background-color: transparent
+                overflow: hidden
+                // Text style
+                text-decoration: none
+                font-family: "Lato - Regular", sans-serif
+                font-size: 18px
+                &:hover
+                    .dz-section1Navbar_rightFirst-btn_arrows
+                        &-first
+                            top: -8px
+                        &-last
+                            top: 20px
+                &_text
+                    margin-right: 5px
+                    position: relative
+                    left: -8px
+                &_arrows
+                    display: flex
+                    flex-direction: column
+                    position: relative
+                    &-first, &-last
+                        position: absolute
+                        font-size: 16px
+                        transition: .8s
+                    &-first
+                        top: -50px
+                    &-last
+                        top: -8px
+            &-dropdown
+                width: 250px
+                &_list
+                    &-li
+                        &_a
+                            overflow: visible
+                            justify-content: flex-start
+                            font-family: "Lato - Regular", sans-serif
+                            font-size: 18px
+                            text-transform: none
+                            position: relative
+                            &::after
+                                content: ""
+                                width: 0px
+                                height: 2px
+                                transition: .5s
+                                position: absolute
+                                bottom: 5px
+                                left: 1px
+                            &:hover::after
+                                width: 35px
+                        .dz-dropActive
+                            &::after
+                                width: 35px
+        &_rightSecond
+            &-icon
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 40px
+                height: 40px
+                &_line
+                    height: 2px
+                    width: 20px
+                    display: block
+                    position: relative
+                    transition: .5s
+                    &::before
+                        content: ''
+                        display: block
+                        position: absolute
+                        left: 0
+                        top: -8px
+                        height: 2px
+                        width: 20px
+                        transition: .5s
+                    &::after
+                        content: ''
+                        display: block
+                        position: absolute
+                        left: 0
+                        top: 8px
+                        height: 2px
+                        width: 20px
+                        transition: .8s
+                &:focus
+                    .dz-section1Navbar_rightSecond-icon_line
+                        &::before
+                            width: 15px
+                        &::after
+                            width: 5px
+            &-menu
+                height: 100vh
+                z-index: 100
+                &_flex
+                    &-btn
+                        &_close
+                            font-size: 20px
+                        &:focus
+                            .dz-section1Navbar_rightSecond-menu_flex-btn_close
+                                transform: rotate(90deg)
+                                transition: .5s
+                    &-list
+                        &_li
+                            margin-bottom: 20px
+                            &-a
+                                font-family: "Lato - Regular", sans-serif
+                                font-size: 20px
+                                text-align: left
+                                position: relative
+                                top: 0
+                                left: 0
+                                &::after
+                                    content: ""
+                                    width: 0px
+                                    height: 2px
+                                    transition: .5s
+                                    position: absolute
+                                    bottom: 6px
+                                    left: 1px
+                                &:focus::after
+                                    width: 35px
+    .dz-section1
+        &_content
+            height: 80vh    
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            &-title
+                margin: 0
+                font-family: "Lato - Bold", sans-serif
+                font-size: 22px
+                font-weight: 700
+                text-transform: uppercase  
+                letter-spacing: 5px
+            &-subtitle
+                margin: 0
+                font-family: "Lato - Regular", sans-serif
+                font-size: 50px
+                margin-top: 10px
+    .dz-subscribeLeft
+        position: absolute
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: absolute
+        left: 20px
+        bottom: 20px
+        &_line
+            display: block
+            width: 2px
+            height: 60px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                width: 2px
+                height: 20px
+                left: 0px
+                bottom: 0px
+                transition: .3s
+            &::after
+                content: ''
+                position: absolute
+                width: 2px
+                height: 20px
+                left: 0px
+                bottom: 0px
+                transition: .3s
+        &_link
+            &-fa
+                margin-top: 15px
+                font-size: 30px
+        &:hover
+            .dz-subscribeLeft_line
+                &::before
+                    left: -7px
+                    bottom: -2px
+                    transform: rotate(-45deg)
+                &::after
+                    left: 7px
+                    bottom: -2px
+                    transform: rotate(45deg)
+    .dz-subscribeRight
+        position: absolute
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: absolute
+        z-index: 2
+        right: 20px
+        bottom: 20px
+        &_line
+            display: block
+            width: 2px
+            height: 60px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                width: 2px
+                height: 20px
+                left: 0px
+                bottom: 0px
+                transition: .3s
+            &::after
+                content: ''
+                position: absolute
+                width: 2px
+                height: 20px
+                left: 0px
+                bottom: 0px
+                transition: .3s
+        &_link
+            &-fa
+                margin-top: 15px
+                font-size: 30px
+        &:hover
+            .dz-subscribeRight_line
+                &::before
+                    left: -7px
+                    bottom: -2px
+                    transform: rotate(-45deg)
+                &::after
+                    left: 7px
+                    bottom: -2px
+                    transform: rotate(45deg)
+    .dz-totop
+        position: fixed
+        right: 20px
+        bottom: 20px
+        z-index: 1
+        transition: .5s
+        &_linkFirst
+            text-decoration: none
+            transition: .5s
+            &-linkLast
+                display: none
+                text-decoration: none
+                &_arrow
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    height: 40px
+                    width: 40px
+                    border-radius: 50%
+                    &-single
+                        font-size: 20px
+                        transition: .8s
+                &:hover
+                    .dz-totop_linkFirst-linkLast_arrow
+                        &-single
+                            transform: rotate(180deg)
+                &_progress
+                    &-circle
+                        transition: .8s
+                        transform-origin: center
+                        transform: rotate(-90deg)
+        &_active
+            display: block
+
+#dz-section2
+    .dz-section2
+        padding-top: 50px
+        padding-bottom: 50px
+        &_title
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-bottom: 50px
+            &-line
+                display: block
+                width: 2px
+                height: 60px
+            &-subtitle
+                text-transform: uppercase
+                font-family: "Lato - Bold", sans-serif
+                font-size: 20px
+                font-weight: 700
+                letter-spacing: 5px
+        &_content
+            &-avatar
+                &_image
+                    height: 500px
+                    width: 400px
+                    border-radius: 50px
+            &-description
+                &_first, &_second, &_third, &_fourth, &_last
+                    &-title
+                        font-family: "Lato - Regular", sans-serif
+                        font-size: 20px
+                &_first, &_second
+                    &-progress
+                        width: 75%
+                &_third
+                    &-progress
+                        width: 40%
+                &_fourth
+                    &-progress
+                        width: 20%
+                &_last
+                    &-title
+                        font-family: "Lato - Regular", sans-serif
+                        font-size: 20px
+                        margin-top: 100px
+                        margin-bottom: 20px
+                    &-btn
+                        display: inline-flex
+                        justify-content: center
+                        align-items: center
+                        flex-direction: column
+                        height: 40px
+                        width: 150px
+                        text-decoration: none
+                        overflow: hidden
+                        margin-right: 10px
+                        &:hover
+                            .dz-section2_content-description_last-btn_description
+                                top: 10px
+                            .dz-section2_content-description_last-btn_fa
+                                top: 8px
+                        &_description
+                            font-family: "Lato - Regular", sans-serif
+                            text-decoration: none
+                            font-size: 20px
+                            position: relative
+                            top: -18px
+                            transition: .5s
+                        &_fa
+                            margin-top: 15px
+                            font-size: 20px
+                            position: relative
+                            top: -40px
+                            transition: .5s
+                    &-blockFirst, &-blockSecond, &-blockLast
+                        display: flex
+                        margin-bottom: 20px
+                        &_link
+                            display: inline-flex
+                            justify-content: center
+                            align-items: center
+                            flex-direction: column
+                            height: 40px
+                            width: 150px
+                            text-decoration: none
+                            overflow: hidden
+                            &:focus
+                                .dz-section2
+                                    &_content
+                                        &-description
+                                            &_last
+                                                &-blockFirst, &-blockSecond, &-blockLast
+                                                    &_link
+                                                        &-description
+                                                            top: 10px
+                                .dz-section2
+                                    &_content
+                                        &-description
+                                            &_last
+                                                &-blockFirst, &-blockSecond, &-blockLast
+                                                    &_link
+                                                        &-fa
+                                                            top: 8px
+                            &-description
+                                font-family: "Lato - Regular", sans-serif
+                                text-decoration: none
+                                font-size: 20px
+                                position: relative
+                                top: -18px
+                                transition: .5s
+                            &-fa
+                                margin-top: 15px
+                                font-size: 20px
+                                position: relative
+                                top: -40px
+                                transition: .5s
+                    &-blockFirst, &-blockLast
+                        justify-content: center
+                    &-blockSecond
+                        justify-content: space-between
+
+#dz-section3
+    .dz-section3                            
+        padding-top: 50px
+        padding-bottom: 50px
+        &_title
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-bottom: 50px
+            &-line
+                display: block
+                width: 120px
+                height: 2px
+            &-work
+                text-transform: uppercase
+                font-family: "Lato - Bold", sans-serif
+                font-size: 20px
+                font-weight: 700
+                letter-spacing: 5px
+            &-subtitle
+                font-family: "Lato - Regular", sans-serif
+                font-size: 50px
+                margin-top: 0
+            &-description
+                font-family: "Lato - Regular", sans-serif
+                font-size: 20px
+                margin-top: 0
+        &_content
+            &-work
+                &_jetProduction, &_playworld, &_creativia, &_creatives, &_perchu, &_loseWeight, &_topSchool, &_coffee, &_kinomonster, &_miraGroup, &_servicePage, &_dublinApps
+                    &-card
+                        background-repeat: no-repeat
+                        background-size: cover
+                        height: 200px
+                        transition: .5s
+                        margin-bottom: 50px
+                &_jetProduction
+                    &-card
+                        background-image: url("../img/Section - 3/jetProduction.jpg")
+                &_playworld
+                    &-card
+                        background-image: url("../img/Section - 3/playworld.jpg")
+                &_creativia
+                    &-card
+                        background-image: url("../img/Section - 3/creativia.jpg")
+                &_creatives
+                    &-card
+                        background-image: url("../img/Section - 3/creatives.jpg")
+                &_perchu
+                    &-card
+                        background-image: url("../img/Section - 3/perchu.jpg")
+                &_loseWeight
+                    &-card
+                        background-image: url("../img/Section - 3/lose-weight.jpg")
+                &_topSchool
+                    &-card
+                        background-image: url("../img/Section - 3/top-school.jpg")
+                &_coffee
+                    &-card
+                        background-image: url("../img/Section - 3/coffee.jpg")
+                &_kinomonster
+                    &-card
+                        background-image: url("../img/Section - 3/kinomonster.jpg")
+                &_miraGroup
+                    &-card
+                        background-image: url("../img/Section - 3/mira-group.jpg")
+                &_servicePage
+                    &-card
+                        background-image: url("../img/Section - 3/service-page.jpg")
+                &_dublinApps
+                    &-card
+                        background-image: url("../img/Section - 3/dublin-apps.jpg")
+
+#dz-section4
+    .dz-section4                           
+        padding-top: 50px
+        padding-bottom: 50px
+        &_title
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-bottom: 50px
+            &-line
+                display: block
+                width: 120px
+                height: 2px
+            &-contact
+                text-transform: uppercase
+                font-family: "Lato - Bold", sans-serif
+                font-size: 20px
+                font-weight: 700
+                letter-spacing: 5px
+            &-subtitle
+                font-family: "Lato - Regular", sans-serif
+                font-size: 50px
+                margin-top: 0
+            &-description
+                font-family: "Lato - Regular", sans-serif
+                font-size: 20px
+                margin-top: 0
+        &_content
+            &-send
+                &_message
+                    font-family: "Lato - Regular", sans-serif
+                    font-size: 20px
+                    letter-spacing: 2.8px
+                    text-transform: uppercase
+                    margin-bottom: 50px
+                &_form
+                    &-input
+                        width: 90%
+                        height: 20px
+                        padding: 15px
+                        border: 1px solid transparent
+                        // Text style
+                        font-family: "Lato - Regular", sans-serif
+                        font-size: 14px
+                        &::-webkit-input-placeholder
+                            font-family: "Lato - Regular", sans-serif
+                            font-size: 14px
+                        &::-moz-placeholder
+                            font-family: "Lato - Regular", sans-serif
+                            font-size: 14px
+                    &-grid
+                        margin-top: 20px
+                        margin-bottom: 20px
+                        &_column
+                            &-input
+                                width: 78.5%
+                                height: 20px
+                                padding: 15px
+                                border: 1px solid transparent
+                                // Text style
+                                font-family: "Lato - Regular", sans-serif
+                                font-size: 14px
+                                &::-webkit-input-placeholder
+                                    font-family: "Lato - Regular", sans-serif
+                                    font-size: 14px
+                                &::-moz-placeholder
+                                    font-family: "Lato - Regular", sans-serif
+                                    font-size: 14px
+                    &-textarea
+                        width: 90%
+                        height: 216px
+                        padding: 15px
+                        border: 1px solid transparent
+                        margin-bottom: 40px
+                        resize: none
+                        // Text style
+                        font-family: "Lato - Regular", sans-serif
+                        font-size: 14px
+                        &::-webkit-input-placeholder
+                            font-family: "Lato - Regular", sans-serif
+                            font-size: 14px
+                        &::-moz-placeholder
+                            font-family: "Lato - Regular", sans-serif
+                            font-size: 14px
+                    &-btn
+                        width: 95.5%
+                        height: 60px
+                        border: 0 
+                        transition: .5s
+                        cursor: pointer
+                        // Text style
+                        font-family: "Lato - Bold", sans-serif
+                        letter-spacing: 2px
+                        font-size: 15px
+                        font-weight: 700
+                        text-transform: uppercase
+                        &:hover
+                            background-color: transparent
+            &-find
+                &_title
+                    font-family: "Lato - Regular", sans-serif
+                    font-size: 20px
+                    letter-spacing: 2.8px
+                    text-transform: uppercase
+                    margin-bottom: 50px
+                &_block
+                    margin-bottom: 35px
+                    &-title
+                        font-family: "Lato - Bold", sans-serif
+                        font-size: 16px
+                        font-weight: 700
+                        letter-spacing: 2.8px
+                        text-transform: uppercase
+                        margin-bottom: 10px
+                    &-subtitle
+                        font-family: "Lato - Regular", sans-serif
+                        font-size: 16px
+                        margin-top: 0
+
+#dz-section5
+    .dz-section5                           
+        padding-top: 50px
+        padding-bottom: 50px
+        &_title
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-bottom: 50px
+            &-line
+                display: block
+                width: 120px
+                height: 2px
+            &-subtitle
+                text-transform: uppercase
+                font-family: "Lato - Bold", sans-serif
+                font-size: 20px
+                font-weight: 700
+                letter-spacing: 5px
+        &_content
+            margin-bottom: 50px
+            &-column
+                text-align: center
+                display: flex
+                flex-direction: column
+                align-items: center
+                &_link
+                    display: flex
+                    width: 250px
+                    overflow: hidden
+                    position: relative
+                    justify-content: center
+                    align-items: center
+                    transition: .5s
+                    margin-bottom: 10px
+                    // Text style
+                    font-family: "Lato - Regular", sans-serif
+                    font-size: 15px
+                    line-height: 30px
+                    text-decoration: none
+                    &-fa
+                        font-size: 25px
+                        position: absolute
+                        transition: .5s
+                    &-logo
+                        text-decoration: underline
+                &:first-child
+                    .dz-section5_content-column_link
+                        &:hover
+                            .dz-section5_content-column_link-fa
+                                left: 40px
+                                opacity: 1
+                    .dz-section5_content-column_link-fa
+                        left: 0px
+                        opacity: 0
+                &:last-child
+                    .dz-section5_content-column_link
+                        &:hover
+                            .dz-section5_content-column_link-fa
+                                right: 40px
+                                opacity: 1
+                    .dz-section5_content-column_link-fa
+                        right: 0px
+                        opacity: 0
+        &_rights
+            &-description
+                font-family: "Lato - Regular", sans-serif
+                font-size: 15px
+                line-height: 30px
+                text-align: left
+                text-align: center
+                &_dz
+                    text-decoration: underline
+                    margin-right: 10px
+
+.p404
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+    &__text
+        .text
+            font-family: "Lato - Regular", sans-serif
+            font-size: 96px
+
+// Animation
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)

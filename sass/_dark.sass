@@ -1,0 +1,234 @@
+::selection
+    background-color: #dfe6e9 !important
+    color: #2d3436 !important
+
+// Webkit custom scrollbar
+::-webkit-scrollbar-track
+    background-color: #dfe6e9 !important
+
+::-webkit-scrollbar-thumb
+    background-color: #2d3436 !important
+
+// Firefox custom scrollbar
+html, body
+    scrollbar-color: #2d3436 #dfe6e9
+    
+body
+    background-color: #242424
+
+.dz-preloader
+    background-color: #242424
+    &_first
+        border-color: #dfe6e9
+        &-text
+            &_d, &_z
+                color: #dfe6e9
+    &_second, &_third, &_last
+        border-top: 4px solid #dfe6e9
+
+.dz-progressBar
+    background-color: #dfe6e9
+
+.uk-notification-message-primary, .uk-notification-message-danger
+    background-color: #242424 !important
+    border: 2px solid #dfe6e9 !important
+    box-shadow: 5px 5px 0px #dfe6e9 !important
+    .uk-notification-close
+        svg
+            line
+                color: #dfe6e9 !important
+
+#dz-section1
+    .dz-section1Navbar
+        &_left
+            &-logo
+                border: 2px solid #dfe6e9
+                &_svg
+                    &-circle
+                        stroke: #dfe6e9
+                &_text
+                    &-d, &-z
+                        color: #dfe6e9
+        &_center
+            &-list
+                &_li
+                    &-a
+                        color: #dfe6e9
+                        &::after
+                            border-bottom: solid 2px #dfe6e9
+        &_rightFirst
+            &-btn
+                border: 2px solid #dfe6e9
+                color: #dfe6e9
+            &-dropdown
+                background-color: #242424
+                border: 2px solid #dfe6e9 
+                box-shadow: 20px 20px 0px 0px #dfe6e9     
+                &_list
+                    &-li
+                        &_a
+                            color: #dfe6e9
+                            &::after
+                                border-bottom: solid 2px #dfe6e9
+        &_rightSecond
+            &-icon
+                border: 2px solid #dfe6e9
+                &_line, &_line::before, &_line::after
+                    background-color: #dfe6e9
+            &-menu
+                &_flex
+                    background-color: #dfe6e9
+                    &-btn
+                        &_close
+                            color: #2d3436
+                    &-list
+                        &_li
+                            &-a
+                                color: #2d3436
+                                &::after
+                                    border-bottom: solid 2px #2d3436
+    .dz-section1
+        &_content
+            &-title, &-subtitle
+                color: #dfe6e9
+    .dz-subscribeLeft, .dz-subscribeRight
+        &_line, &_line::before, &_line::after
+            background-color: #dfe6e9
+        &_link
+            &-fa
+                color: #dfe6e9
+    .dz-totop
+        &_linkFirst
+            &-linkLast
+                &_arrow
+                    border: 2px solid #dfe6e9
+                    &-single
+                        color: #dfe6e9
+                &_progress
+                    &-circle
+                        stroke: #dfe6e9
+        &_active
+            display: block
+
+#dz-section2
+    .dz-section2
+        &_title
+            &-line
+                background-color: #dfe6e9
+            &-subtitle
+                color: #dfe6e9
+        &_content
+            &-avatar
+                &_image
+                    border: 4px solid #dfe6e9
+            &-description
+                &_first, &_second, &_third, &_fourth, &_last
+                    &-title
+                        color: #dfe6e9
+                    &-progress::-moz-progress-bar, &-progress::-webkit-progress-value
+                &_last
+                    &-title
+                        color: #dfe6e9
+                    &-btn
+                        border: 2px solid #dfe6e9
+                        &_description, &_fa
+                            color: #dfe6e9
+                    &-blockFirst, &-blockSecond, &-blockLast
+                        &_link
+                            border: 2px solid #dfe6e9
+                            &_description, &_fa
+                                color: #dfe6e9
+
+#dz-section3
+    .dz-section3                            
+        &_title
+            &-line
+                background-color: #dfe6e9
+            &-work, &-subtitle, &-description
+                color: #dfe6e9
+        &_content
+            &-work
+                &_jetProduction, &_playworld, &_creativia, &_creatives, &_perchu, &_loseWeight, &_topSchool, &_coffee, &_kinomonster, &_miraGroup, &_servicePage, &_dublinApps
+                    &-card
+                        border: 4px solid #dfe6e9
+                        &:hover
+                            -webkit-box-shadow: 20px 20px 0px 0px #dfe6e9
+                            -moz-box-shadow: 20px 20px 0px 0px #dfe6e9
+                            box-shadow: 20px 20px 0px 0px #dfe6e9
+
+#dz-section4
+    .dz-section4                           
+        &_title
+            &-line
+                background-color: #dfe6e9
+            &-contact, &-subtitle, &-description
+                color: #dfe6e9
+        &_content
+            &-send
+                &_message
+                    color: #dfe6e9
+                &_form
+                    &-input
+                        background-color: #dfe6e9
+                        color: #242424
+                        &::-webkit-input-placeholder, &::-moz-placeholder
+                            color: #242424
+                        &::selection
+                            background-color: #2d3436 !important
+                            color: #dfe6e9 !important
+                    &-grid
+                        &_column
+                            &-input
+                                background-color: #dfe6e9
+                                // Text style
+                                color: #242424
+                                &::-webkit-input-placeholder, &::-moz-placeholder
+                                    color: #242424
+                                &::selection
+                                    background-color: #2d3436 !important
+                                    color: #dfe6e9 !important
+                    &-textarea
+                        background-color: #dfe6e9
+                        // Text style
+                        color: #242424
+                        &::-webkit-input-placeholder, &::-moz-placeholder
+                            color: #242424
+                        &::selection
+                            background-color: #2d3436 !important
+                            color: #dfe6e9 !important
+                    &-btn
+                        background-color: #dfe6e9
+                        border: 2px solid #dfe6e9
+                        // Text style
+                        color: #242424
+                        &:hover
+                            background-color: transparent
+                            color: #dfe6e9
+            &-find
+                &_title
+                    color: #dfe6e9
+                &_block
+                    &-title
+                        color: #dfe6e9
+                    &-subtitle
+                        color: #dfe6e9
+
+#dz-section5
+    .dz-section5                           
+        &_title
+            &-line
+                background-color: #dfe6e9
+            &-subtitle
+                color: #dfe6e9
+        &_content
+            &-column
+                &_link
+                    color: #dfe6e9
+        &_rights
+            &-description
+                color: #dfe6e9
+
+.p404
+    &__text
+        .text
+            color: #dfe6e9
